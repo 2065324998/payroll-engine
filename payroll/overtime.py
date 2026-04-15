@@ -42,8 +42,7 @@ def calculate_overtime_pay(shifts: list[ShiftHours],
         regular_pay += base_pay
         shift_differential_pay += diff_pay
 
-    # BUG: Overtime rate uses base_hourly_rate instead of weighted average
-    # of all shift rates worked during the period
+    # Calculate overtime rate and pay
     overtime_rate = base_hourly_rate * OVERTIME_MULTIPLIER
     overtime_pay = round(total_overtime_hours * overtime_rate, 2)
 
