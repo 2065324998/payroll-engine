@@ -41,7 +41,6 @@ def calculate_marginal_tax(annual_income: float) -> float:
       - Remaining $2,850 ($47,150 to $50,000) at 22% = $627
       - Total: $6,053
     """
-    # BUG: Uses flat rate based on top bracket instead of progressive calculation
     rate = get_tax_rate(annual_income)
     return round(annual_income * rate, 2)
 
